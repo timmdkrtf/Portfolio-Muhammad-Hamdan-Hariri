@@ -1,6 +1,6 @@
 import Particles from "../components/Particles";
-import ButtonCrosshair from "../components/buttonCrosshair";
-import ButtonSlash from "../components/buttonSlash";
+import ButtonCrosshair from "../components/ButtonCrosshair";
+import ButtonSlash from "../components/ButtonSlash";
 import TextType from "../components/TextType";
 import SplitText from "../components/SplitText";
 import CV from "../assets/CV_Muhammad Hamdan Hariri.pdf"
