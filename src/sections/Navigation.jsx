@@ -1,4 +1,4 @@
-import ButtonSlice from "../components/buttonSlice";
+import ButtonSlice from "../components/ButtonSlice";
 import { useState, useEffect } from "react";
 
 export default function Navigation() {
