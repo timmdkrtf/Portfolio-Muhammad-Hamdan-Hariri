@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-xs: 28rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.orbitron-font{
+  font-family: "Orbitron", sans-serif;
+}
+
+.source3-font{
+  font-family: "Source Sans 3", sans-serif;
+}
+
+  .personal-info .flex-info .sosmed::before{
+    content: "";
+    position: absolute;
+    width: calc(100% + 10px);
+    height: 60%;
+    left: -5px;
+    top: 27px;
+    background-color: #1e1e26;
+    z-index: 0;
+  }
+  .personal-info .flex-info .sosmed::after{
+    content: "";
+    position: absolute;
+    width: 75%;
+    height: calc(100% + 10px);
+    left: 27px;
+    top: -5px;
+    background-color: #1e1e26;
+    z-index: 1;
+  }
+
+@media screen and (max-width: 1280px) {
+  .personal-info .flex-info .sosmed::before{
+    left: -5px;
+    top: 29px;
+  }
+  .personal-info .flex-info .sosmed::after{
+    left: 23px;
+    top: -5px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .personal-info .flex-info .sosmed::before{
+    left: -5px;
+    top: 29px;
+    background-color: #1a1921;
+  }
+  .personal-info .flex-info .sosmed::after{
+    left: 25px;
+    top: -5px;
+    width: 70%;
+    background-color: #1a1921;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .personal-info .flex-info .sosmed::before{
+    left: -5px;
+    top: 29px;
+    background-color: #16151d;
+  }
+  .personal-info .flex-info .sosmed::after{
+    left: 28px;
+    top: -5px;
+    width: 65%;
+    background-color: #16151d;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .personal-info .content .right .card::after{
+
+    background-color: #16151d !important;
+  }
+}
+
+@media screen and (max-width: 448px){
+    .personal-info .content .right .card::after{
+    width: 70px !important;
+    bottom: 7px !important;
+    right: -15px !important;
+  }
+}
+
+  .personal-info .content .right .card::after{
+    position: absolute;
+    content: "";
+    width: 120px;
+    height: 10px;
+    z-index: 10;
+    bottom: 25px;
+    right: -25px;
+    transform: rotate(-40deg);
+    background-color: #212129;
+  }
+
+
+/* .personal-info .skill-list::after{
+  position: absolute;
+  content: "";
+  width: 150px;
+  height: 5px;
+  bottom: 10px;
+  right: -18px;
+  background-color: #18171f;
+  transform: rotate(-34deg);
+} */
