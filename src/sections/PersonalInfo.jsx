@@ -109,14 +109,17 @@ export default function PersonalInfo() {
                   <img
                     className="abs-element absolute w-16 object-contain hidden xs:block top-7 left-4"
                     src={Element1}
+                    alt="arrow-back end"
                   />
                   <img
                     className="abs-element absolute w-16 object-contain hidden xs:block bottom-11 right-2"
                     src={Element2}
+                    alt="arrow-front end"
                   />
                   <img
                     className="abs-element absolute w-12 object-contain hidden xs:block bottom-6 left-5"
                     src={Element3}
+                    alt="arrow design"
                   />
                   <div className="text-white text-center orbitron-font mt-[-10px]">
                     <CountUp

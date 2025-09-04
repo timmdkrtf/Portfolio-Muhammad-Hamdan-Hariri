@@ -1,15 +1,19 @@
 export default function CardProject({ title, description, imageCover, category, onClick }) {
   return (
     <a
+      href="#"
       rel="noopener noreferrer"
-      onClick={onClick}
+      onClick={e => {
+        e.preventDefault();
+        onClick && onClick(e);
+      }}
       className="block h-full bg-[#31323E] p-[27px] overflow-hidden shadow-lg hover:scale-105 transition-transform cursor-target"
     >
       <div className="w-full h-50 relative" style={{clipPath: "polygon(0 0, 80% 0, 100% 30%, 100% 100%, 14% 100%, 0 80%)" }}>
         <img
-            src={imageCover}
-            alt={title}
-            className="w-full h-full object-cover"
+          src={imageCover}
+          alt={title}
+          className="w-full h-full object-cover"
         />
         <span className="absolute top-3 left-3 source3-font font-medium text-xs bg-[#31323E] px-2 py-[2px] text-[#BFC0D1]">{category}</span>
       </div>
