@@ -36,6 +36,7 @@ export default function Navigation() {
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 class="text-gray-700 focus:outline-none "
+                aria-label="Toggle menu"
               >
                 <svg
                   class="h-6 w-6"
