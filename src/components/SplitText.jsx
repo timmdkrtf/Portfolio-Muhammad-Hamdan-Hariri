@@ -24,12 +24,12 @@ const SplitText = ({
   const scrollTriggerRef = useRef(null);
 
   useEffect(() => {
-    if (typeof window === "undefined" || !ref.current || !text) return;
+  if (typeof window === "undefined" || !ref.current || !text) return;
 
-    const el = ref.current;
-    
-    animationCompletedRef.current = false;
+  const el = ref.current;
+  animationCompletedRef.current = false;
 
+  const runSplit = () => {
     const absoluteLines = splitType === "lines";
     if (absoluteLines) el.style.position = "relative";
 
@@ -54,8 +54,6 @@ const SplitText = ({
         targets = splitter.words;
         break;
       case "chars":
-        targets = splitter.chars;
-        break;
       default:
         targets = splitter.chars;
     }
@@ -74,7 +72,10 @@ const SplitText = ({
     const marginMatch = /^(-?\d+(?:\.\d+)?)(px|em|rem|%)?$/.exec(rootMargin);
     const marginValue = marginMatch ? parseFloat(marginMatch[1]) : 0;
     const marginUnit = marginMatch ? (marginMatch[2] || "px") : "px";
-    const sign = marginValue < 0 ? `-=${Math.abs(marginValue)}${marginUnit}` : `+=${marginValue}${marginUnit}`;
+    const sign =
+      marginValue < 0
+        ? `-=${Math.abs(marginValue)}${marginUnit}`
+        : `+=${marginValue}${marginUnit}`;
     const start = `top ${startPct}%${sign}`;
 
     const tl = gsap.timeline({
@@ -119,18 +120,29 @@ const SplitText = ({
         splitter.revert();
       }
     };
-  }, [
-    text,
-    delay,
-    duration,
-    ease,
-    splitType,
-    from,
-    to,
-    threshold,
-    rootMargin,
-    onLetterAnimationComplete,
-  ]);
+  };
+
+  // ⬇️ Tunggu sampai font siap dulu
+  let cleanup;
+  document.fonts.ready.then(() => {
+    cleanup = runSplit();
+  });
+
+  return () => {
+    cleanup?.();
+  };
+}, [
+  text,
+  delay,
+  duration,
+  ease,
+  splitType,
+  from,
+  to,
+  threshold,
+  rootMargin,
+  onLetterAnimationComplete,
+]);
 
   return (
     <p
