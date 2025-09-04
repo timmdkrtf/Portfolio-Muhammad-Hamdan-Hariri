@@ -197,6 +197,7 @@ export default function PersonalInfo() {
                       <li>Boostrap & Tailwind</li>
                       <li>UI / UX</li>
                       <li>Figma</li>
+                      <li>Node Js</li>
                     </ul>
                   </div>
                 </div>
