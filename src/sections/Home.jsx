@@ -27,6 +27,7 @@ export default function Home() {
         <div className="content flex flex-col gap-[80px] w-full sm:w-auto">
           <div className="title text-center">
             <SplitText
+              aria-label="Introduction"
               text="I'm Hamdan Hariri"
               className="orbitron-font text-white text-[34px] xs:text-[42px] sm:text-[58px] font-extrabold cursor-target"
               delay={80}

@@ -138,13 +138,13 @@ export default function PersonalInfo() {
                 <div className="sosmed w-[55%] xs:w-[45%] h-full border-5 border-[#BFC0D1CC] relative cursor-target">
                   <div className="content flex flex-col py-2 px-4 h-full relative z-2">
                     <div className="title h-[25%]">
-                      <h6 className="orbitron-font font-semibold text-white text-center text-sm xs:text-base mt-1">
+                      <p className="orbitron-font font-semibold text-white text-center text-sm xs:text-base mt-1">
                         Social Media
-                      </h6>
+                      </p>
                     </div>
                     <div className="icon-link w-full h-[75%] flex justify-center items-center">
-                      <a href="https://www.linkedin.com/in/muhammadhamdanhariri/" target="_blank">
-                        <img src={IconLinkedIn} alt="" className="w-12 xs:w-14" />
+                      <a href="https://www.linkedin.com/in/muhammadhamdanhariri/" target="_blank" aria-label="LinkedIn Profile">
+                        <img src={IconLinkedIn} alt="LinkedIn Icon" className="w-12 xs:w-14" />
                       </a>
                     </div>
                   </div>
